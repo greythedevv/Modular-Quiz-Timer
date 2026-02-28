@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Quiz Card */
+.quiz-box{
+    background-color: #2a2a40;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(255,255,255,0.05);
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Timer */
+#timer{
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffcc00;
+}
+
+/* Question */
+#Question{
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Options Layout */
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+/* Option Buttons */
+.option-btn{
+    padding: 14px;
+    background-color: #38385e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.3s ease;
+}
+
+.option-btn:hover{
+    background-color: #4b6cb7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.option-btn.correct{
+    background-color: #28a745;
+}
+
+.option-btn.wrong{
+    background-color: #e74c3c;
+}
+
+/* Next + Restart Buttons */
+#next-btn,
+.restart-btn{
+    padding: 12px 24px;
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.3s ease;
+}
+
+#next-btn:hover,
+.restart-btn:hover{
+    background-color: #182848;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+/* Result Section */
+.result{
+    margin-top: 20px;
+}
+
+.result h2{
+    margin-bottom: 10px;
+}
+
+/* Smooth Fade */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
